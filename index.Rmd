@@ -7,7 +7,7 @@ date        : today
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [shiny, interactive, bootstrap]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
@@ -18,41 +18,31 @@ knit        : slidify::knit2slides
 >1. The Instrument
 >2. Exploratory Analysis
 >3. The REAL Mafia in a Network context
-  >3.1 Academic
-  >3.2 Friendship
+  - Academic
+  - Friendship
 >4. Spatial Analysis
 >5. The REAL Virtual Yearbook
 >6. Memories Semantic Analysis
-  
----
+
+
+--- .centrepre &vcenter
 
 ## The Instrument
 
-*** left
--Section
-  - Identification
-  - Time in REAL
-  - Academics with REAL
-  - REAL Memories and Annecdotes
-  
-*** right
-- Description
-  - Name, Country, Affiliation, etc.
-  - Dates, Mafia role, General, sitting, etc.
-  - Research areas, collaboration, influences, post-mafia work.
-  - CU, UIUC, REAL, Geoff
+```{r echo=FALSE, results='asis', message=FALSE}
+require(googleVis)
+table1<-as.data.frame(cbind(c("Identification","Time in REAL","Academics with REAL","REAL Memories and Annecdotes"),c("Name, Country, Affiliation, etc.","Dates, Mafia role, General, sitting, etc.","Research areas, collaboration, influences, post-mafia work.","CU, UIUC, REAL, Geoff")))
+names(table1)<-c("Section","Description")
+table2<-gvisTable(table1)
+cat(unlist(table2$html$chart))
+print(table2,tag='chart')
+```
 
----
+--- 
 ## The "Actual" Instrument
 
 <iframe src="https://docs.google.com/forms/d/1B3qXUtLhqH7JSpo1zLH0DZeEzPPt0YIXEMp48NUA0eI/edit" heingt='600px'></iframe>
 
---- #montreal bg:url(http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/EB1911_Africa.jpg/600px-EB1911_Africa.jpg)
-## Montreal at night Time
-
----#dillinger
-
-<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
 
 --- .middle
 
