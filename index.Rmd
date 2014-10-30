@@ -3,6 +3,7 @@ title       : Creating a Virtual Yearbook of the REAL Mafia
 subtitle    : Exploring its members' memories and connections
 author      : Esteban Lopez
 job         : UIUC PhD Candidate, REAL 'General'
+date        : November 12th, 2014
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -12,7 +13,7 @@ knit        : slidify::knit2slides
 
 ---
 
-## Un dos tres
+## Outline
 
 >1. Uno
 >2. Dos
