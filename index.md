@@ -227,14 +227,20 @@ callbacks.shift()();
   style="width: 500; height: automatic;">
 </div>
 
---- 
+--- #dillinger
 
 ## The 'Actual' Instrument
 
-<iframe src="https://docs.google.com/forms/d/1B3qXUtLhqH7JSpo1zLH0DZeEzPPt0YIXEMp48NUA0eI/edit" heingt='600px'></iframe>
+<iframe src="https://docs.google.com/forms/d/1B3qXUtLhqH7JSpo1zLH0DZeEzPPt0YIXEMp48NUA0eI/viewform?edit_requested=true" heingt='600px'></iframe>
 
----
+--- .middle
 
 ## Exploratory Analysis
 
----
+>1. A
+
+--- #dillinger
+
+## The REAL Mafia in a Network Context
+
+<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
