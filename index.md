@@ -229,10 +229,12 @@ callbacks.shift()();
 
 --- 
 
-## The "Actual" Instrument
+## The 'Actual' Instrument
 
 <iframe src="https://docs.google.com/forms/d/1B3qXUtLhqH7JSpo1zLH0DZeEzPPt0YIXEMp48NUA0eI/edit" heingt='600px'></iframe>
 
---- .middle
+---
 
-Slidify is Awesome
+## Exploratory Analysis
+
+---
