@@ -3,7 +3,6 @@ title       : Creating a Virtual Yearbook of the REAL Mafia
 subtitle    : Exploring its members' memories and connections
 author      : Esteban Lopez
 job         : UIUC PhD Candidate, REAL 'General'
-date        : today
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -229,10 +228,10 @@ callbacks.shift()();
 </div>
 
 --- 
+
 ## The "Actual" Instrument
 
 <iframe src="https://docs.google.com/forms/d/1B3qXUtLhqH7JSpo1zLH0DZeEzPPt0YIXEMp48NUA0eI/edit" heingt='600px'></iframe>
-
 
 --- .middle
 
