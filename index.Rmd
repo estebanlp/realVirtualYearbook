@@ -43,11 +43,29 @@ print(table2,tag='chart')
 
 <iframe src="https://docs.google.com/forms/d/1B3qXUtLhqH7JSpo1zLH0DZeEzPPt0YIXEMp48NUA0eI/viewform?edit_requested=true" heingt='600px'></iframe>
 
---- .middle
+---  &vcenter
 
-## Exploratory Analysis
+## Exploratory Analysis 
 
->1. A
+1. Please select the FRIST most important research area you focused on while you were at REAL.
+
+
+---  &vcenter
+
+## Exploratory Analysis 
+
+1. Please select the FRIST most important research area you focused on while you were at REAL.
+
+
+```{r echo=FALSE, message=FALSE, results='asis',size=5}
+data<-read.csv("data/data_exploratory.csv")
+pie1<-as.data.frame(round(prop.table(table(data$research_2)),2))
+pie2<-gvisPieChart(pie1,options=list(
+                    slices="{5: {offset: 0.2}, 10: {offset: 0.3}}",
+                    pieHole=0.2, chartArea="{left:20,top:20,width:'200%',height:'200%'}", height="600px"))
+cat(unlist(pie2$html$chart))
+print(pie2,tag="chart")
+```
 
 --- #dillinger
 
