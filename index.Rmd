@@ -137,21 +137,6 @@ cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
 
----  &vcenter
-
-## THIRD most important research area at REAL.
-
-```{r echo=FALSE, message=FALSE, results='asis'}
-data<-read.csv("data/data_exploratory.csv")
-pie1<-as.data.frame(round(table(data$research_3),2))
-pie2<-gvisPieChart(pie1,options=list(
-                    slices="{5: {offset: 0.2}, 10: {offset: 0.3}}",
-                    pieHole=0.2, chartArea="{left:0,top:0,width:'100%',height:'100%'}", 
-                    height="500px",legend="none"))
-cat(unlist(pie2$html$chart))
-print(pie2,tag="chart")
-```
-
 --- #dillinger
 
 ## The REAL Mafia in a Network Context
