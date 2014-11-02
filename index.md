@@ -1011,14 +1011,14 @@ callbacks.shift()();
 ## FRIST most important research area at REAL.
 
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 13:52:23 2014 -->
+<!-- Sun Nov  2 14:08:03 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDc5be9f41a8 () {
+function gvisDataPieChartIDdb311f1ab5d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1070,18 +1070,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDc5be9f41a8() {
-var data = gvisDataPieChartIDc5be9f41a8();
+function drawChartPieChartIDdb311f1ab5d() {
+var data = gvisDataPieChartIDdb311f1ab5d();
 var options = {};
 options["allowHtml"] = true;
-options["slices"] = {5: {offset: 0.2}, 10: {offset: 0.3}};
-options["pieHole"] =    0.2;
-options["chartArea"] = {left:0,top:0,width:'100%',height:'100%'};
-options["height"] = "500px";
+options["width"] =    700;
+options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDc5be9f41a8')
+    document.getElementById('PieChartIDdb311f1ab5d')
     );
     chart.draw(data,options);
     
@@ -1105,9 +1103,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDc5be9f41a8);
+callbacks.push(drawChartPieChartIDdb311f1ab5d);
 })();
-function displayChartPieChartIDc5be9f41a8() {
+function displayChartPieChartIDdb311f1ab5d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1131,22 +1129,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDc5be9f41a8"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdb311f1ab5d"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDc5be9f41a8" 
-  style="width: 500; height: 500px;">
+<div id="PieChartIDdb311f1ab5d" 
+  style="width: 700; height: 600;">
 </div>
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 13:52:23 2014 -->
+<!-- Sun Nov  2 14:08:03 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDc5be9f41a8 () {
+function gvisDataPieChartIDdb311f1ab5d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1198,18 +1196,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDc5be9f41a8() {
-var data = gvisDataPieChartIDc5be9f41a8();
+function drawChartPieChartIDdb311f1ab5d() {
+var data = gvisDataPieChartIDdb311f1ab5d();
 var options = {};
 options["allowHtml"] = true;
-options["slices"] = {5: {offset: 0.2}, 10: {offset: 0.3}};
-options["pieHole"] =    0.2;
-options["chartArea"] = {left:0,top:0,width:'100%',height:'100%'};
-options["height"] = "500px";
+options["width"] =    700;
+options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDc5be9f41a8')
+    document.getElementById('PieChartIDdb311f1ab5d')
     );
     chart.draw(data,options);
     
@@ -1233,9 +1229,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDc5be9f41a8);
+callbacks.push(drawChartPieChartIDdb311f1ab5d);
 })();
-function displayChartPieChartIDc5be9f41a8() {
+function displayChartPieChartIDdb311f1ab5d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1259,12 +1255,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDc5be9f41a8"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdb311f1ab5d"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDc5be9f41a8" 
-  style="width: 500; height: 500px;">
+<div id="PieChartIDdb311f1ab5d" 
+  style="width: 700; height: 600;">
 </div>
 
 ---  &vcenter
@@ -1272,14 +1268,14 @@ callbacks.shift()();
 ## SECOND most important research area at REAL.
 
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 13:52:23 2014 -->
+<!-- Sun Nov  2 14:08:26 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDc5b798f8417 () {
+function gvisDataPieChartIDdbd1fd26f3a () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1331,18 +1327,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDc5b798f8417() {
-var data = gvisDataPieChartIDc5b798f8417();
+function drawChartPieChartIDdbd1fd26f3a() {
+var data = gvisDataPieChartIDdbd1fd26f3a();
 var options = {};
 options["allowHtml"] = true;
-options["slices"] = {5: {offset: 0.2}, 10: {offset: 0.3}};
-options["pieHole"] =    0.2;
-options["chartArea"] = {left:0,top:0,width:'100%',height:'100%'};
-options["height"] = "500px";
+options["width"] =    700;
+options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDc5b798f8417')
+    document.getElementById('PieChartIDdbd1fd26f3a')
     );
     chart.draw(data,options);
     
@@ -1366,9 +1360,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDc5b798f8417);
+callbacks.push(drawChartPieChartIDdbd1fd26f3a);
 })();
-function displayChartPieChartIDc5b798f8417() {
+function displayChartPieChartIDdbd1fd26f3a() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1392,22 +1386,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDc5b798f8417"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdbd1fd26f3a"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDc5b798f8417" 
-  style="width: 500; height: 500px;">
+<div id="PieChartIDdbd1fd26f3a" 
+  style="width: 700; height: 600;">
 </div>
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 13:52:23 2014 -->
+<!-- Sun Nov  2 14:08:26 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDc5b798f8417 () {
+function gvisDataPieChartIDdbd1fd26f3a () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1459,18 +1453,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDc5b798f8417() {
-var data = gvisDataPieChartIDc5b798f8417();
+function drawChartPieChartIDdbd1fd26f3a() {
+var data = gvisDataPieChartIDdbd1fd26f3a();
 var options = {};
 options["allowHtml"] = true;
-options["slices"] = {5: {offset: 0.2}, 10: {offset: 0.3}};
-options["pieHole"] =    0.2;
-options["chartArea"] = {left:0,top:0,width:'100%',height:'100%'};
-options["height"] = "500px";
+options["width"] =    700;
+options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDc5b798f8417')
+    document.getElementById('PieChartIDdbd1fd26f3a')
     );
     chart.draw(data,options);
     
@@ -1494,9 +1486,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDc5b798f8417);
+callbacks.push(drawChartPieChartIDdbd1fd26f3a);
 })();
-function displayChartPieChartIDc5b798f8417() {
+function displayChartPieChartIDdbd1fd26f3a() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1520,12 +1512,12 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDc5b798f8417"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdbd1fd26f3a"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDc5b798f8417" 
-  style="width: 500; height: 500px;">
+<div id="PieChartIDdbd1fd26f3a" 
+  style="width: 700; height: 600;">
 </div>
 
 --- #dillinger

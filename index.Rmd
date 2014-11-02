@@ -114,10 +114,7 @@ print(pie2,tag="chart")
 setwd("/Users/estebanlopez/Documents/001 PhD Material/Work at REAL/25th-Anniversary/Timeline/realVirtualYearbook/")
 data<-read.csv("data/data_exploratory.csv")
 pie1<-as.data.frame(round(table(data$research_1),2))
-pie2<-gvisPieChart(pie1,options=list(
-                    slices="{5: {offset: 0.2}, 10: {offset: 0.3}}",
-                    pieHole=0.2, chartArea="{left:0,top:0,width:'100%',height:'100%'}", 
-                    height="500px",legend="none"))
+pie2<-gvisPieChart(pie1,options=list(width=700, height=600,legend="none"))
 cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
@@ -129,10 +126,7 @@ print(pie2,tag="chart")
 ```{r echo=FALSE, message=FALSE, results='asis'}
 data<-read.csv("data/data_exploratory.csv")
 pie1<-as.data.frame(round(table(data$research_2),2))
-pie2<-gvisPieChart(pie1,options=list(
-                    slices="{5: {offset: 0.2}, 10: {offset: 0.3}}",
-                    pieHole=0.2, chartArea="{left:0,top:0,width:'100%',height:'100%'}", 
-                    height="500px",legend="none"))
+pie2<-gvisPieChart(pie1,options=list(width=700, height=600,legend="none"))
 cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
