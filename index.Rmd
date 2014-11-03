@@ -24,7 +24,7 @@ knit        : slidify::knit2slides
 >6. Memories Semantic Analysis
 
 
---- .centrepre &vcenter
+--- 
 
 ## The Instrument
 
@@ -35,19 +35,27 @@ names(table1)<-c("Section","Description")
 table2<-gvisTable(table1)
 cat(unlist(table2$html$chart))
 print(table2,tag='chart')
-```
 
---- #dillinger
+```
+<br>
+
+- Sampled REAL Mafia: 400 (aprox.) e-mails sent
+- Number of Respondents REAL Mafia: 104 responded surveys
+- Number of attendants to this event: 120 aprox. 
+
+---
 
 ## The 'Actual' Instrument
 
 <iframe src="https://docs.google.com/forms/d/1B3qXUtLhqH7JSpo1zLH0DZeEzPPt0YIXEMp48NUA0eI/viewform?edit_requested=true" heingt='600px'></iframe>
 
+--- .segue bg:indigo
+
+## Exploratory Analysis
+
 ---  &vcenter
 
-## Exploratory Analysis 
-
-<strong>Demographic Frequencies </strong>
+## Demographic Frequencies
 
 ```{r echo=FALSE, message=FALSE, results='asis',size=6}
 require(stargazer)
@@ -75,7 +83,7 @@ levels(data$Country_Origin2)[levels(data$Country_Origin2)=="Espa\x96a"]<-"Spain"
 levels(data$Country_Origin2)[levels(data$Country_Origin2)=="T\x9frkiye"]<-"Turkey"
 
 pie3<-as.data.frame(round(table(data[,"Country_Origin2"]),2))
-pie4<-gvisGeoChart(pie3,"Var1","Freq",options=list(width=600, height=500))
+pie4<-gvisGeoChart(pie3,"Var1","Freq",options=list(width=800, height=500))
 cat(unlist(pie4$html$chart))
 print(pie4,tag="chart")
 ```
@@ -101,7 +109,7 @@ levels(data$Current_Country2)[levels(data$Current_Country2)=="M\x8exico"]<-"Mexi
 levels(data$Current_Country2)[levels(data$Current_Country2)=="T\x9frkiye"]<-"Turkey"
 levels(data$Current_Country2)[levels(data$Current_Country2)=="Brazil - USA"]<-"Brazil"
 pie1<-as.data.frame(round(table(data[,"Current_Country2"]),2))
-pie2<-gvisGeoChart(pie1,"Var1","Freq",options=list(width=600, height=500))
+pie2<-gvisGeoChart(pie1,"Var1","Freq",options=list(width=800, height=500))
 cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
@@ -131,7 +139,17 @@ cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
 
---- #dillinger
+## Academic Productivity
+
+```{r echo=FALSE, message=FALSE, results='asis'}
+data<-read.csv("data/data_exploratory.csv")
+pie1<-as.data.frame(round(table(data$research_2),2))
+pie2<-gvisPieChart(pie1,options=list(width=700, height=600,legend="none"))
+cat(unlist(pie2$html$chart))
+print(pie2,tag="chart")
+```
+
+--- 
 
 ## The REAL Mafia in a Network Context
 
