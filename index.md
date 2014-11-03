@@ -6,10 +6,9 @@ job         : UIUC PhD Candidate, REAL 'General'
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [bootstrap, quiz, shiny, interactive]
+widgets     : [bootstrap, quiz]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
-ext_widgets: {rCharts: [libraries/nvd3]}
 
 ---
 
@@ -2337,51 +2336,6 @@ callbacks.shift()();
 </div>
 
 ---
-
-```r
-slidifyUI(
-  sidebarPanel(
-    selectInput('mafia', 'Choose Mafia Type', c('Master Student', 'PhD and Master Student','PhD Student', 'Visiting Scholar')),
-    selectInput('type', 'Choose Type',
-      c('multiBarChart', 'multiBarHorizontalChart')
-    )
-  ),
-  mainPanel(
-    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
-  )
-)
-```
-
-```
-## Error: could not find function "slidifyUI"
-```
-
-
-```r
-require(rCharts)
-```
-
-```
-## Loading required package: rCharts
-```
-
-```r
-output$nvd3plot <- renderChart({
-  dat<- data.frame(table(data$Mafia_type,data$working_papers))
-  names(dat)<-c("Mafia_Type","Working_Papers")
-  n1 <- nPlot(Mafia_Type ~ Working_Papers, group = 'Mafia_Type', type = input$type,
-    data = subset(dat, Mafia_Type == input$mafia)
-  )
-  n1$set(dom = 'nvd3plot', width = 600)
-  n1
-})
-```
-
-```
-## Error: object 'output' not found
-```
-
---- 
 
 ## The REAL Mafia in a Network Context
 

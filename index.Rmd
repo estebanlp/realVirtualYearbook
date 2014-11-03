@@ -125,10 +125,6 @@ cat(unlist(h1$html$chart))
 print(h1,tag="chart")
 ```
 
->- Who gets the prize for the longest stay? (_Besides Geoff of course_) 
-
->- ```[1] "Norihiko Yamano"```
-
 --- .segue bg:indigo
 
 ## Academics at REAL
