@@ -1813,10 +1813,6 @@ callbacks.shift()();
   style="width: 800; height: 300;">
 </div>
 
->- Who gets the prize for the longest stay? (_Besides Geoff of course_) 
-
->- ```[1] "Norihiko Yamano"```
-
 --- .segue bg:indigo
 
 ## Academics at REAL
@@ -2334,6 +2330,18 @@ callbacks.shift()();
 <div id="PieChartID122e6893c337" 
   style="width: 700; height: 600;">
 </div>
+
+--- &vcenter
+
+## Productivity by Mafia Type
+
+![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
+
+--- &vcenter
+
+## Productivity by Research Area (First)
+
+![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
 
 ---
 

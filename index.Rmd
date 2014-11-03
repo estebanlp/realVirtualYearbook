@@ -154,6 +154,39 @@ cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
 
+--- &vcenter
+
+## Productivity by Mafia Type
+
+```{r echo=F,message=FALSE,results='asis'}
+require(doBy)
+require(ggplot2)
+df<-data.frame(summaryBy(months_total~Mafia_type + working_papers,data=data))
+a<-ggplot(df,aes(x=working_papers, y=months_total.mean, group=Mafia_type))
+a + geom_bar(stat="identity", position="dodge",aes(fill=Mafia_type))+labs(y="Months in REAL", x="Number of Working Papers", fill="")+ theme(legend.position="bottom")
+```
+
+--- &vcenter
+
+## Productivity by Research Area (First)
+
+```{r echo=F,message=FALSE,results='asis'}
+require(doBy)
+require(ggplot2)
+df<-data.frame(summaryBy(months_total~research_1 + working_papers,data=data))
+levels(df$research_1)[levels(data$research_1)=="Environmental and Natural Resources"]<-"Environmental"
+levels(df$research_1)[levels(data$research_1)=="Innovation and Regional Economic Development"]<-"Reg. Econ. Dev."
+levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_1)[levels(data$research_1)=="Regional Economic Growth"]<-"Econ. Growth"
+levels(df$research_1)[levels(data$research_1)=="Regional Housing and Labor Markets"]<-"Housing & Labor Mark."
+levels(df$research_1)[levels(data$research_1)=="Spatial Analysis and Geocomputation"]<-"Geocomputation"
+
+
+a<-ggplot(df,aes(x=working_papers, y=months_total.mean, group=research_1))
+a + geom_bar(stat="identity", position="dodge",aes(fill=research_1))+labs(y="Months in REAL", x="Number of Working Papers", fill="") + theme(legend.position="right")
+```
+
 ---
 
 ## The REAL Mafia in a Network Context
