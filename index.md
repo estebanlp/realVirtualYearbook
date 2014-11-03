@@ -6,9 +6,10 @@ job         : UIUC PhD Candidate, REAL 'General'
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [shiny, interactive, bootstrap]
+widgets     : [bootstrap, quiz, shiny, interactive]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+ext_widgets: {rCharts: [libraries/nvd3]}
 
 ---
 
@@ -29,14 +30,14 @@ knit        : slidify::knit2slides
 ## The Instrument
 
 <!-- Table generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 14:17:30 2014 -->
+<!-- Sun Nov  2 19:13:57 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableIDeb2db51cf9 () {
+function gvisDataTableID124d5e29153e () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -64,13 +65,15 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableIDeb2db51cf9() {
-var data = gvisDataTableIDeb2db51cf9();
+function drawChartTableID124d5e29153e() {
+var data = gvisDataTableID124d5e29153e();
 var options = {};
 options["allowHtml"] = true;
+options["width"] =    800;
+options["height"] =    300;
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableIDeb2db51cf9')
+    document.getElementById('TableID124d5e29153e')
     );
     chart.draw(data,options);
     
@@ -94,9 +97,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableIDeb2db51cf9);
+callbacks.push(drawChartTableID124d5e29153e);
 })();
-function displayChartTableIDeb2db51cf9() {
+function displayChartTableID124d5e29153e() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -120,22 +123,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableIDeb2db51cf9"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID124d5e29153e"></script>
  
 <!-- divChart -->
   
-<div id="TableIDeb2db51cf9" 
-  style="width: 500; height: automatic;">
+<div id="TableID124d5e29153e" 
+  style="width: 800; height: 300;">
 </div>
 <!-- Table generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 14:17:30 2014 -->
+<!-- Sun Nov  2 19:13:57 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableIDeb2db51cf9 () {
+function gvisDataTableID124d5e29153e () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -163,13 +166,15 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableIDeb2db51cf9() {
-var data = gvisDataTableIDeb2db51cf9();
+function drawChartTableID124d5e29153e() {
+var data = gvisDataTableID124d5e29153e();
 var options = {};
 options["allowHtml"] = true;
+options["width"] =    800;
+options["height"] =    300;
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableIDeb2db51cf9')
+    document.getElementById('TableID124d5e29153e')
     );
     chart.draw(data,options);
     
@@ -193,9 +198,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableIDeb2db51cf9);
+callbacks.push(drawChartTableID124d5e29153e);
 })();
-function displayChartTableIDeb2db51cf9() {
+function displayChartTableID124d5e29153e() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -219,18 +224,18 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableIDeb2db51cf9"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID124d5e29153e"></script>
  
 <!-- divChart -->
   
-<div id="TableIDeb2db51cf9" 
-  style="width: 500; height: automatic;">
+<div id="TableID124d5e29153e" 
+  style="width: 800; height: 300;">
 </div>
 <br>
 
-- Sampled REAL Mafia: 400 (aprox.) e-mails sent
-- Number of Respondents REAL Mafia: 104 responded surveys
-- Number of attendants to this event: 120 aprox. 
+- Sampled REAL Mafia: _400 (aprox.) e-mails sent_
+- Number of Respondents REAL Mafia: _104 responded surveys_
+- Number of attendants to this event: _120 aprox._ 
 
 ---
 
@@ -1013,19 +1018,823 @@ callbacks.shift()();
   style="width: 800; height: 500;">
 </div>
 
+--- 
+## Duration in REAL
+
+<!-- Histogram generated in R 3.1.1 by googleVis 0.5.5 package -->
+<!-- Sun Nov  2 19:04:03 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataHistogramID11dc3e6510ce () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ 11 
+],
+[
+ 12 
+],
+[
+ 13 
+],
+[
+ 26 
+],
+[
+ 18 
+],
+[
+ 51 
+],
+[
+ 24 
+],
+[
+ 3 
+],
+[
+ 3 
+],
+[
+ 22 
+],
+[
+ 5 
+],
+[
+ 4 
+],
+[
+ 12 
+],
+[
+ 0 
+],
+[
+ 12 
+],
+[
+ 60 
+],
+[
+ 5 
+],
+[
+ 30 
+],
+[
+ 3 
+],
+[
+ 21 
+],
+[
+ 19 
+],
+[
+ 48 
+],
+[
+ 12 
+],
+[
+ 43 
+],
+[
+ 43 
+],
+[
+ 3 
+],
+[
+ 2 
+],
+[
+ 2 
+],
+[
+ 24 
+],
+[
+ 12 
+],
+[
+ 52 
+],
+[
+ 3 
+],
+[
+ 18 
+],
+[
+ 3 
+],
+[
+ 56 
+],
+[
+ 36 
+],
+[
+ 4 
+],
+[
+ 18 
+],
+[
+ 20 
+],
+[
+ 1 
+],
+[
+ 13 
+],
+[
+ 36 
+],
+[
+ 11 
+],
+[
+ 3 
+],
+[
+ 59 
+],
+[
+ 48 
+],
+[
+ 38 
+],
+[
+ 9 
+],
+[
+ 60 
+],
+[
+ 12 
+],
+[
+ 60 
+],
+[
+ 3 
+],
+[
+ 55 
+],
+[
+ 12 
+],
+[
+ 40 
+],
+[
+ 12 
+],
+[
+ 42 
+],
+[
+ 3 
+],
+[
+ 36 
+],
+[
+ 2 
+],
+[
+ 48 
+],
+[
+ 32 
+],
+[
+ 11 
+],
+[
+ 11 
+],
+[
+ 5 
+],
+[
+ 10 
+],
+[
+ 27 
+],
+[
+ 9 
+],
+[
+ 12 
+],
+[
+ 6 
+],
+[
+ 54 
+],
+[
+ 60 
+],
+[
+ 0 
+],
+[
+ 13 
+],
+[
+ 72 
+],
+[
+ 3 
+],
+[
+ 50 
+],
+[
+ 5 
+],
+[
+ 7 
+],
+[
+ 30 
+],
+[
+ 24 
+],
+[
+ 1 
+],
+[
+ 16 
+],
+[
+ 60 
+],
+[
+ 15 
+],
+[
+ 15 
+],
+[
+ 4 
+],
+[
+ 36 
+],
+[
+ 24 
+],
+[
+ 48 
+],
+[
+ 24 
+],
+[
+ 26 
+],
+[
+ 3 
+],
+[
+ 12 
+],
+[
+ 38 
+],
+[
+ 6 
+],
+[
+ 46 
+],
+[
+ 53 
+],
+[
+ 59 
+],
+[
+ 7 
+],
+[
+ 24 
+],
+[
+ 26 
+],
+[
+ 12 
+],
+[
+ 18 
+] 
+];
+data.addColumn('number','months_total');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartHistogramID11dc3e6510ce() {
+var data = gvisDataHistogramID11dc3e6510ce();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    800;
+options["height"] =    300;
+
+    var chart = new google.visualization.Histogram(
+    document.getElementById('HistogramID11dc3e6510ce')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartHistogramID11dc3e6510ce);
+})();
+function displayChartHistogramID11dc3e6510ce() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID11dc3e6510ce"></script>
+ 
+<!-- divChart -->
+  
+<div id="HistogramID11dc3e6510ce" 
+  style="width: 800; height: 300;">
+</div>
+<!-- Histogram generated in R 3.1.1 by googleVis 0.5.5 package -->
+<!-- Sun Nov  2 19:04:03 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataHistogramID11dc3e6510ce () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ 11 
+],
+[
+ 12 
+],
+[
+ 13 
+],
+[
+ 26 
+],
+[
+ 18 
+],
+[
+ 51 
+],
+[
+ 24 
+],
+[
+ 3 
+],
+[
+ 3 
+],
+[
+ 22 
+],
+[
+ 5 
+],
+[
+ 4 
+],
+[
+ 12 
+],
+[
+ 0 
+],
+[
+ 12 
+],
+[
+ 60 
+],
+[
+ 5 
+],
+[
+ 30 
+],
+[
+ 3 
+],
+[
+ 21 
+],
+[
+ 19 
+],
+[
+ 48 
+],
+[
+ 12 
+],
+[
+ 43 
+],
+[
+ 43 
+],
+[
+ 3 
+],
+[
+ 2 
+],
+[
+ 2 
+],
+[
+ 24 
+],
+[
+ 12 
+],
+[
+ 52 
+],
+[
+ 3 
+],
+[
+ 18 
+],
+[
+ 3 
+],
+[
+ 56 
+],
+[
+ 36 
+],
+[
+ 4 
+],
+[
+ 18 
+],
+[
+ 20 
+],
+[
+ 1 
+],
+[
+ 13 
+],
+[
+ 36 
+],
+[
+ 11 
+],
+[
+ 3 
+],
+[
+ 59 
+],
+[
+ 48 
+],
+[
+ 38 
+],
+[
+ 9 
+],
+[
+ 60 
+],
+[
+ 12 
+],
+[
+ 60 
+],
+[
+ 3 
+],
+[
+ 55 
+],
+[
+ 12 
+],
+[
+ 40 
+],
+[
+ 12 
+],
+[
+ 42 
+],
+[
+ 3 
+],
+[
+ 36 
+],
+[
+ 2 
+],
+[
+ 48 
+],
+[
+ 32 
+],
+[
+ 11 
+],
+[
+ 11 
+],
+[
+ 5 
+],
+[
+ 10 
+],
+[
+ 27 
+],
+[
+ 9 
+],
+[
+ 12 
+],
+[
+ 6 
+],
+[
+ 54 
+],
+[
+ 60 
+],
+[
+ 0 
+],
+[
+ 13 
+],
+[
+ 72 
+],
+[
+ 3 
+],
+[
+ 50 
+],
+[
+ 5 
+],
+[
+ 7 
+],
+[
+ 30 
+],
+[
+ 24 
+],
+[
+ 1 
+],
+[
+ 16 
+],
+[
+ 60 
+],
+[
+ 15 
+],
+[
+ 15 
+],
+[
+ 4 
+],
+[
+ 36 
+],
+[
+ 24 
+],
+[
+ 48 
+],
+[
+ 24 
+],
+[
+ 26 
+],
+[
+ 3 
+],
+[
+ 12 
+],
+[
+ 38 
+],
+[
+ 6 
+],
+[
+ 46 
+],
+[
+ 53 
+],
+[
+ 59 
+],
+[
+ 7 
+],
+[
+ 24 
+],
+[
+ 26 
+],
+[
+ 12 
+],
+[
+ 18 
+] 
+];
+data.addColumn('number','months_total');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartHistogramID11dc3e6510ce() {
+var data = gvisDataHistogramID11dc3e6510ce();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    800;
+options["height"] =    300;
+
+    var chart = new google.visualization.Histogram(
+    document.getElementById('HistogramID11dc3e6510ce')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartHistogramID11dc3e6510ce);
+})();
+function displayChartHistogramID11dc3e6510ce() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID11dc3e6510ce"></script>
+ 
+<!-- divChart -->
+  
+<div id="HistogramID11dc3e6510ce" 
+  style="width: 800; height: 300;">
+</div>
+
+>- Who gets the prize for the longest stay? (_Besides Geoff of course_) 
+
+>- ```[1] "Norihiko Yamano"```
+
+--- .segue bg:indigo
+
+## Academics at REAL
+
 ---  &vcenter
 
 ## FRIST most important research area at REAL.
 
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 14:08:03 2014 -->
+<!-- Sun Nov  2 19:12:06 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDdb311f1ab5d () {
+function gvisDataPieChartID122e76ab4e16 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1077,8 +1886,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDdb311f1ab5d() {
-var data = gvisDataPieChartIDdb311f1ab5d();
+function drawChartPieChartID122e76ab4e16() {
+var data = gvisDataPieChartID122e76ab4e16();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    700;
@@ -1086,7 +1895,7 @@ options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDdb311f1ab5d')
+    document.getElementById('PieChartID122e76ab4e16')
     );
     chart.draw(data,options);
     
@@ -1110,9 +1919,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDdb311f1ab5d);
+callbacks.push(drawChartPieChartID122e76ab4e16);
 })();
-function displayChartPieChartIDdb311f1ab5d() {
+function displayChartPieChartID122e76ab4e16() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1136,22 +1945,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdb311f1ab5d"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e76ab4e16"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDdb311f1ab5d" 
+<div id="PieChartID122e76ab4e16" 
   style="width: 700; height: 600;">
 </div>
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 14:08:03 2014 -->
+<!-- Sun Nov  2 19:12:06 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDdb311f1ab5d () {
+function gvisDataPieChartID122e76ab4e16 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1203,8 +2012,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDdb311f1ab5d() {
-var data = gvisDataPieChartIDdb311f1ab5d();
+function drawChartPieChartID122e76ab4e16() {
+var data = gvisDataPieChartID122e76ab4e16();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    700;
@@ -1212,7 +2021,7 @@ options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDdb311f1ab5d')
+    document.getElementById('PieChartID122e76ab4e16')
     );
     chart.draw(data,options);
     
@@ -1236,9 +2045,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDdb311f1ab5d);
+callbacks.push(drawChartPieChartID122e76ab4e16);
 })();
-function displayChartPieChartIDdb311f1ab5d() {
+function displayChartPieChartID122e76ab4e16() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1262,11 +2071,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdb311f1ab5d"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e76ab4e16"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDdb311f1ab5d" 
+<div id="PieChartID122e76ab4e16" 
   style="width: 700; height: 600;">
 </div>
 
@@ -1275,14 +2084,14 @@ callbacks.shift()();
 ## SECOND most important research area at REAL.
 
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 14:08:26 2014 -->
+<!-- Sun Nov  2 19:12:06 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDdbd1fd26f3a () {
+function gvisDataPieChartID122e6893c337 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1334,8 +2143,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDdbd1fd26f3a() {
-var data = gvisDataPieChartIDdbd1fd26f3a();
+function drawChartPieChartID122e6893c337() {
+var data = gvisDataPieChartID122e6893c337();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    700;
@@ -1343,7 +2152,7 @@ options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDdbd1fd26f3a')
+    document.getElementById('PieChartID122e6893c337')
     );
     chart.draw(data,options);
     
@@ -1367,9 +2176,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDdbd1fd26f3a);
+callbacks.push(drawChartPieChartID122e6893c337);
 })();
-function displayChartPieChartIDdbd1fd26f3a() {
+function displayChartPieChartID122e6893c337() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1393,22 +2202,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdbd1fd26f3a"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e6893c337"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDdbd1fd26f3a" 
+<div id="PieChartID122e6893c337" 
   style="width: 700; height: 600;">
 </div>
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 14:08:26 2014 -->
+<!-- Sun Nov  2 19:12:06 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartIDdbd1fd26f3a () {
+function gvisDataPieChartID122e6893c337 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1460,8 +2269,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartIDdbd1fd26f3a() {
-var data = gvisDataPieChartIDdbd1fd26f3a();
+function drawChartPieChartID122e6893c337() {
+var data = gvisDataPieChartID122e6893c337();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    700;
@@ -1469,7 +2278,7 @@ options["height"] =    600;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartIDdbd1fd26f3a')
+    document.getElementById('PieChartID122e6893c337')
     );
     chart.draw(data,options);
     
@@ -1493,9 +2302,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartIDdbd1fd26f3a);
+callbacks.push(drawChartPieChartID122e6893c337);
 })();
-function displayChartPieChartIDdbd1fd26f3a() {
+function displayChartPieChartID122e6893c337() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1519,15 +2328,60 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDdbd1fd26f3a"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e6893c337"></script>
  
 <!-- divChart -->
   
-<div id="PieChartIDdbd1fd26f3a" 
+<div id="PieChartID122e6893c337" 
   style="width: 700; height: 600;">
 </div>
 
---- #dillinger
+---
+
+```r
+slidifyUI(
+  sidebarPanel(
+    selectInput('mafia', 'Choose Mafia Type', c('Master Student', 'PhD and Master Student','PhD Student', 'Visiting Scholar')),
+    selectInput('type', 'Choose Type',
+      c('multiBarChart', 'multiBarHorizontalChart')
+    )
+  ),
+  mainPanel(
+    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
+  )
+)
+```
+
+```
+## Error: could not find function "slidifyUI"
+```
+
+
+```r
+require(rCharts)
+```
+
+```
+## Loading required package: rCharts
+```
+
+```r
+output$nvd3plot <- renderChart({
+  dat<- data.frame(table(data$Mafia_type,data$working_papers))
+  names(dat)<-c("Mafia_Type","Working_Papers")
+  n1 <- nPlot(Mafia_Type ~ Working_Papers, group = 'Mafia_Type', type = input$type,
+    data = subset(dat, Mafia_Type == input$mafia)
+  )
+  n1$set(dom = 'nvd3plot', width = 600)
+  n1
+})
+```
+
+```
+## Error: object 'output' not found
+```
+
+--- 
 
 ## The REAL Mafia in a Network Context
 

@@ -6,7 +6,7 @@ job         : UIUC PhD Candidate, REAL 'General'
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [shiny, interactive, bootstrap]
+widgets     : [bootstrap, quiz]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
@@ -32,16 +32,16 @@ knit        : slidify::knit2slides
 require(googleVis)
 table1<-as.data.frame(cbind(c("Identification","Time in REAL","Academics with REAL","REAL Memories and Annecdotes"),c("Name, Country, Affiliation, etc.","Dates, Mafia role, General, sitting, etc.","Research areas, collaboration, influences, post-mafia work.","CU, UIUC, REAL, Geoff")))
 names(table1)<-c("Section","Description")
-table2<-gvisTable(table1)
+table2<-gvisTable(table1,options=list(width=800, height=300))
 cat(unlist(table2$html$chart))
 print(table2,tag='chart')
 
 ```
 <br>
 
-- Sampled REAL Mafia: 400 (aprox.) e-mails sent
-- Number of Respondents REAL Mafia: 104 responded surveys
-- Number of attendants to this event: 120 aprox. 
+- Sampled REAL Mafia: _400 (aprox.) e-mails sent_
+- Number of Respondents REAL Mafia: _104 responded surveys_
+- Number of attendants to this event: _120 aprox._ 
 
 ---
 
@@ -114,6 +114,25 @@ cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
 
+--- 
+## Duration in REAL
+
+```{r echo=FALSE, message=FALSE, results='asis'}
+require(googleVis)
+data<-read.csv("data2.csv")
+h1<-gvisHistogram(data.frame(data["months_total"]),options=list(width=800, height=300))
+cat(unlist(h1$html$chart))
+print(h1,tag="chart")
+```
+
+>- Who gets the prize for the longest stay? (_Besides Geoff of course_) 
+
+>- ```[1] "Norihiko Yamano"```
+
+--- .segue bg:indigo
+
+## Academics at REAL
+
 ---  &vcenter
 
 ## FRIST most important research area at REAL.
@@ -132,24 +151,14 @@ print(pie2,tag="chart")
 ## SECOND most important research area at REAL.
 
 ```{r echo=FALSE, message=FALSE, results='asis'}
-data<-read.csv("data/data_exploratory.csv")
+data<-read.csv("data2.csv")
 pie1<-as.data.frame(round(table(data$research_2),2))
 pie2<-gvisPieChart(pie1,options=list(width=700, height=600,legend="none"))
 cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
 
-## Academic Productivity
-
-```{r echo=FALSE, message=FALSE, results='asis'}
-data<-read.csv("data/data_exploratory.csv")
-pie1<-as.data.frame(round(table(data$research_2),2))
-pie2<-gvisPieChart(pie1,options=list(width=700, height=600,legend="none"))
-cat(unlist(pie2$html$chart))
-print(pie2,tag="chart")
-```
-
---- 
+---
 
 ## The REAL Mafia in a Network Context
 
