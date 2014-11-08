@@ -6,7 +6,7 @@ job         : UIUC PhD Candidate, REAL 'General'
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [bootstrap, quiz]
+widgets     : [bootstrap, quiz, mathjax]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
@@ -120,38 +120,154 @@ print(pie2,tag="chart")
 ```{r echo=FALSE, message=FALSE, results='asis'}
 require(googleVis)
 data<-read.csv("data2.csv")
-h1<-gvisHistogram(data.frame(data["months_total"]),options=list(width=800, height=300))
-cat(unlist(h1$html$chart))
-print(h1,tag="chart")
+h1<-gvisHistogram(data.frame(data["months_total"]),options=list(width=800, height=350,legend="{position:'top'}",legend.alignment='end'))
+print(h1,'chart')
 ```
+- Mafia type by duration:
+  - _0-14_: Short term scholars (Spaniards & Brazilian Sandwich Mostly)
+  - _14-28_: Long term scholars & Masters
+  - _28+_: PhD Students and REAL lovers.
 
 --- .segue bg:indigo
 
 ## Academics at REAL
 
----  &vcenter
+--- &twocol w1:45% w2:35% &vcenter
 
-## FRIST most important research area at REAL.
-
+## 1st most important research area at REAL.
+*** =left
 ```{r echo=FALSE, message=FALSE, results='asis'}
 setwd("/Users/estebanlopez/Documents/001 PhD Material/Work at REAL/25th-Anniversary/Timeline/realVirtualYearbook/")
 data<-read.csv("data/data_exploratory.csv")
 pie1<-as.data.frame(round(table(data$research_1),2))
-pie2<-gvisPieChart(pie1,options=list(width=700, height=600,legend="none"))
+pie2<-gvisPieChart(pie1,options=list(width=600, height=550,legend="none"))
 cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
 
----  &vcenter
+*** =right
 
-## SECOND most important research area at REAL.
+>- <strong> within Regional Economic Growth falls:</strong>
+    - Neoclasical, Endogenous & Spatial Growth Models
+    - CGEs, static, dynamic and spatial
+    - Regional growth and convergence
+    - Spatial Policy for Growth and Equity
 
+>- _together Growth, Spatial Econometrics, Housing & Labor make up to 63%_
+
+--- &twocol w1:45% w2:35% &vcenter
+
+## 2nd most important research area at REAL.
+*** =left
 ```{r echo=FALSE, message=FALSE, results='asis'}
 data<-read.csv("data2.csv")
 pie1<-as.data.frame(round(table(data$research_2),2))
-pie2<-gvisPieChart(pie1,options=list(width=700, height=600,legend="none"))
+pie2<-gvisPieChart(pie1,options=list(width=600, height=550,legend="none"))
 cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
+```
+*** =right
+>- All spatial sciences grow in importance
+>- Further survey should have a finer categorization
+
+--- &vcenter
+
+## Productivity by Research Area (1st)
+
+```{r echo=F,message=FALSE,results='asis'}
+require(doBy)
+require(ggplot2)
+df<-data.frame(table(data$research_1,data$working_papers))
+names(df)<-c("research_1","working_papers","Freq")
+
+levels(df$research_1)[levels(data$research_1)=="Environmental and Natural Resources"]<-"Environmental"
+levels(df$research_1)[levels(data$research_1)=="Innovation and Regional Economic Development"]<-"Reg. Econ. Dev."
+levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_1)[levels(data$research_1)=="Regional Economic Growth"]<-"Econ. Growth"
+levels(df$research_1)[levels(data$research_1)=="Regional Housing and Labor Markets"]<-"Housing & Labor Mark."
+levels(df$research_1)[levels(data$research_1)=="Spatial Analysis and Geocomputation"]<-"Geocomputation"
+
+df2<-reshape(df,timevar="research_1",direction="wide",idvar="working_papers",v.names="Freq")
+
+colnames(df2)[2:11]<-levels(factor(df$research_1))
+
+bchart<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Frequency'}"))
+print(bchart,'chart')
+
+```
+
+--- &vcenter
+## Productivity by Research Area (1st) & No. of Months
+
+```{r echo=F,message=FALSE,results='asis'}
+require(doBy)
+require(ggplot2)
+df<-data.frame(summaryBy(months_total~research_1 + working_papers,data=data,FUN=mean))
+levels(df$research_1)[levels(data$research_1)=="Environmental and Natural Resources"]<-"Environmental"
+levels(df$research_1)[levels(data$research_1)=="Innovation and Regional Economic Development"]<-"Reg. Econ. Dev."
+levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_1)[levels(data$research_1)=="Regional Economic Growth"]<-"Econ. Growth"
+levels(df$research_1)[levels(data$research_1)=="Regional Housing and Labor Markets"]<-"Housing & Labor Mark."
+levels(df$research_1)[levels(data$research_1)=="Spatial Analysis and Geocomputation"]<-"Geocomputation"
+
+df2<-reshape(df,timevar="research_1",direction="wide",idvar="working_papers",v.names="months_total.mean")
+colnames(df2)[2:11]<-levels(factor(df$research_1))
+
+bchart1<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Average Number of months'}"))
+print(bchart1,'chart')
+
+```
+
+--- &vcenter
+
+## Productivity by Research Area (2nd)
+
+```{r echo=F,message=FALSE,results='asis'}
+require(doBy)
+require(ggplot2)
+df<-data.frame(table(data$research_2,data$working_papers))
+names(df)<-c("research_2","working_papers","Freq")
+
+levels(df$research_2)[levels(data$research_2)=="Environmental and Natural Resources"]<-"Environmental"
+levels(df$research_2)[levels(data$research_2)=="Innovation and Regional Economic Development"]<-"Reg. Econ. Dev."
+levels(df$research_2)[levels(data$research_2)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_2)[levels(data$research_2)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_2)[levels(data$research_2)=="Regional Economic Growth"]<-"Econ. Growth"
+levels(df$research_2)[levels(data$research_2)=="Regional Housing and Labor Markets"]<-"Housing & Labor Mark."
+levels(df$research_2)[levels(data$research_2)=="Spatial Analysis and Geocomputation"]<-"Geocomputation"
+
+df2<-reshape(df,timevar="research_2",direction="wide",idvar="working_papers",v.names="Freq")
+
+colnames(df2)[2:11]<-levels(factor(df$research_2))
+
+bchart<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Frequency'}"))
+print(bchart,'chart')
+
+```
+
+--- &vcenter
+## Productivity by Research Area (2nd) & No. of Months
+
+```{r echo=F,message=FALSE,results='asis'}
+require(doBy)
+require(ggplot2)
+df<-data.frame(summaryBy(months_total~research_2 + working_papers,data=data,FUN=mean))
+levels(df$research_2)[levels(data$research_2)=="Environmental and Natural Resources"]<-"Environmental"
+levels(df$research_2)[levels(data$research_2)=="Innovation and Regional Economic Development"]<-"Reg. Econ. Dev."
+levels(df$research_2)[levels(data$research_2)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_2)[levels(data$research_2)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
+levels(df$research_2)[levels(data$research_2)=="Regional Economic Growth"]<-"Econ. Growth"
+levels(df$research_2)[levels(data$research_2)=="Regional Housing and Labor Markets"]<-"Housing & Labor Mark."
+levels(df$research_2)[levels(data$research_2)=="Spatial Analysis and Geocomputation"]<-"Geocomputation"
+
+df2<-reshape(df,timevar="research_2",direction="wide",idvar="working_papers",v.names="months_total.mean")
+colnames(df2)[2:11]<-levels(factor(df$research_2))
+
+bchart1<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Average Number of months'}"))
+print(bchart1,'chart')
+
 ```
 
 --- &vcenter
@@ -166,29 +282,9 @@ a<-ggplot(df,aes(x=working_papers, y=months_total.mean, group=Mafia_type))
 a + geom_bar(stat="identity", position="dodge",aes(fill=Mafia_type))+labs(y="Months in REAL", x="Number of Working Papers", fill="")+ theme(legend.position="bottom")
 ```
 
---- &vcenter
-
-## Productivity by Research Area (First)
-
-```{r echo=F,message=FALSE,results='asis'}
-require(doBy)
-require(ggplot2)
-df<-data.frame(summaryBy(months_total~research_1 + working_papers,data=data))
-levels(df$research_1)[levels(data$research_1)=="Environmental and Natural Resources"]<-"Environmental"
-levels(df$research_1)[levels(data$research_1)=="Innovation and Regional Economic Development"]<-"Reg. Econ. Dev."
-levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
-levels(df$research_1)[levels(data$research_1)=="New Economic Geography and Evolutionary Economic Geography"]<-"NEG"
-levels(df$research_1)[levels(data$research_1)=="Regional Economic Growth"]<-"Econ. Growth"
-levels(df$research_1)[levels(data$research_1)=="Regional Housing and Labor Markets"]<-"Housing & Labor Mark."
-levels(df$research_1)[levels(data$research_1)=="Spatial Analysis and Geocomputation"]<-"Geocomputation"
-
-
-a<-ggplot(df,aes(x=working_papers, y=months_total.mean, group=research_1))
-a + geom_bar(stat="identity", position="dodge",aes(fill=research_1))+labs(y="Months in REAL", x="Number of Working Papers", fill="") + theme(legend.position="right")
-```
 
 ---
 
-## The REAL Mafia in a Network Context
+## The REAL Mafia in a Network Context (Academics)
 
 <iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>

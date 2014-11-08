@@ -6,7 +6,7 @@ job         : UIUC PhD Candidate, REAL 'General'
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [bootstrap, quiz]
+widgets     : [bootstrap, quiz, mathjax]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
@@ -1021,14 +1021,14 @@ callbacks.shift()();
 ## Duration in REAL
 
 <!-- Histogram generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 19:04:03 2014 -->
+<!-- Sat Nov  8 10:36:58 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataHistogramID11dc3e6510ce () {
+function gvisDataHistogramID391111c80526 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1351,15 +1351,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartHistogramID11dc3e6510ce() {
-var data = gvisDataHistogramID11dc3e6510ce();
+function drawChartHistogramID391111c80526() {
+var data = gvisDataHistogramID391111c80526();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    800;
-options["height"] =    300;
+options["height"] =    350;
+options["legend"] = {position:'top'};
+options["legend.alignment"] = "end";
 
     var chart = new google.visualization.Histogram(
-    document.getElementById('HistogramID11dc3e6510ce')
+    document.getElementById('HistogramID391111c80526')
     );
     chart.draw(data,options);
     
@@ -1383,9 +1385,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartHistogramID11dc3e6510ce);
+callbacks.push(drawChartHistogramID391111c80526);
 })();
-function displayChartHistogramID11dc3e6510ce() {
+function displayChartHistogramID391111c80526() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1409,427 +1411,35 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID11dc3e6510ce"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID391111c80526"></script>
  
 <!-- divChart -->
   
-<div id="HistogramID11dc3e6510ce" 
-  style="width: 800; height: 300;">
+<div id="HistogramID391111c80526" 
+  style="width: 800; height: 350;">
 </div>
-<!-- Histogram generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 19:04:03 2014 -->
-
-
-<!-- jsHeader -->
-<script type="text/javascript">
- 
-// jsData 
-function gvisDataHistogramID11dc3e6510ce () {
-var data = new google.visualization.DataTable();
-var datajson =
-[
- [
- 11 
-],
-[
- 12 
-],
-[
- 13 
-],
-[
- 26 
-],
-[
- 18 
-],
-[
- 51 
-],
-[
- 24 
-],
-[
- 3 
-],
-[
- 3 
-],
-[
- 22 
-],
-[
- 5 
-],
-[
- 4 
-],
-[
- 12 
-],
-[
- 0 
-],
-[
- 12 
-],
-[
- 60 
-],
-[
- 5 
-],
-[
- 30 
-],
-[
- 3 
-],
-[
- 21 
-],
-[
- 19 
-],
-[
- 48 
-],
-[
- 12 
-],
-[
- 43 
-],
-[
- 43 
-],
-[
- 3 
-],
-[
- 2 
-],
-[
- 2 
-],
-[
- 24 
-],
-[
- 12 
-],
-[
- 52 
-],
-[
- 3 
-],
-[
- 18 
-],
-[
- 3 
-],
-[
- 56 
-],
-[
- 36 
-],
-[
- 4 
-],
-[
- 18 
-],
-[
- 20 
-],
-[
- 1 
-],
-[
- 13 
-],
-[
- 36 
-],
-[
- 11 
-],
-[
- 3 
-],
-[
- 59 
-],
-[
- 48 
-],
-[
- 38 
-],
-[
- 9 
-],
-[
- 60 
-],
-[
- 12 
-],
-[
- 60 
-],
-[
- 3 
-],
-[
- 55 
-],
-[
- 12 
-],
-[
- 40 
-],
-[
- 12 
-],
-[
- 42 
-],
-[
- 3 
-],
-[
- 36 
-],
-[
- 2 
-],
-[
- 48 
-],
-[
- 32 
-],
-[
- 11 
-],
-[
- 11 
-],
-[
- 5 
-],
-[
- 10 
-],
-[
- 27 
-],
-[
- 9 
-],
-[
- 12 
-],
-[
- 6 
-],
-[
- 54 
-],
-[
- 60 
-],
-[
- 0 
-],
-[
- 13 
-],
-[
- 72 
-],
-[
- 3 
-],
-[
- 50 
-],
-[
- 5 
-],
-[
- 7 
-],
-[
- 30 
-],
-[
- 24 
-],
-[
- 1 
-],
-[
- 16 
-],
-[
- 60 
-],
-[
- 15 
-],
-[
- 15 
-],
-[
- 4 
-],
-[
- 36 
-],
-[
- 24 
-],
-[
- 48 
-],
-[
- 24 
-],
-[
- 26 
-],
-[
- 3 
-],
-[
- 12 
-],
-[
- 38 
-],
-[
- 6 
-],
-[
- 46 
-],
-[
- 53 
-],
-[
- 59 
-],
-[
- 7 
-],
-[
- 24 
-],
-[
- 26 
-],
-[
- 12 
-],
-[
- 18 
-] 
-];
-data.addColumn('number','months_total');
-data.addRows(datajson);
-return(data);
-}
- 
-// jsDrawChart
-function drawChartHistogramID11dc3e6510ce() {
-var data = gvisDataHistogramID11dc3e6510ce();
-var options = {};
-options["allowHtml"] = true;
-options["width"] =    800;
-options["height"] =    300;
-
-    var chart = new google.visualization.Histogram(
-    document.getElementById('HistogramID11dc3e6510ce')
-    );
-    chart.draw(data,options);
-    
-
-}
-  
- 
-// jsDisplayChart
-(function() {
-var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = "corechart";
-  
-// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-var i, newPackage = true;
-for (i = 0; newPackage && i < pkgs.length; i++) {
-if (pkgs[i] === chartid)
-newPackage = false;
-}
-if (newPackage)
-  pkgs.push(chartid);
-  
-// Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartHistogramID11dc3e6510ce);
-})();
-function displayChartHistogramID11dc3e6510ce() {
-  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-  window.clearTimeout(window.__gvisLoad);
-  // The timeout is set to 100 because otherwise the container div we are
-  // targeting might not be part of the document yet
-  window.__gvisLoad = setTimeout(function() {
-  var pkgCount = pkgs.length;
-  google.load("visualization", "1", { packages:pkgs, callback: function() {
-  if (pkgCount != pkgs.length) {
-  // Race condition where another setTimeout call snuck in after us; if
-  // that call added a package, we must not shift its callback
-  return;
-}
-while (callbacks.length > 0)
-callbacks.shift()();
-} });
-}, 100);
-}
- 
-// jsFooter
-</script>
- 
-<!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID11dc3e6510ce"></script>
- 
-<!-- divChart -->
-  
-<div id="HistogramID11dc3e6510ce" 
-  style="width: 800; height: 300;">
-</div>
+- Mafia type by duration:
+  - _0-14_: Short term scholars (Spaniards & Brazilian Sandwich Mostly)
+  - _14-28_: Long term scholars & Masters
+  - _28+_: PhD Students and REAL lovers.
 
 --- .segue bg:indigo
 
 ## Academics at REAL
 
----  &vcenter
+--- &twocol w1:45% w2:35% &vcenter
 
-## FRIST most important research area at REAL.
-
+## 1st most important research area at REAL.
+*** =left
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 19:12:06 2014 -->
+<!-- Fri Nov  7 06:28:48 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartID122e76ab4e16 () {
+function gvisDataPieChartID2fc1789f2fb9 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1881,16 +1491,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartID122e76ab4e16() {
-var data = gvisDataPieChartID122e76ab4e16();
+function drawChartPieChartID2fc1789f2fb9() {
+var data = gvisDataPieChartID2fc1789f2fb9();
 var options = {};
 options["allowHtml"] = true;
-options["width"] =    700;
-options["height"] =    600;
+options["width"] =    600;
+options["height"] =    550;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartID122e76ab4e16')
+    document.getElementById('PieChartID2fc1789f2fb9')
     );
     chart.draw(data,options);
     
@@ -1914,9 +1524,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartID122e76ab4e16);
+callbacks.push(drawChartPieChartID2fc1789f2fb9);
 })();
-function displayChartPieChartID122e76ab4e16() {
+function displayChartPieChartID2fc1789f2fb9() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1940,22 +1550,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e76ab4e16"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID2fc1789f2fb9"></script>
  
 <!-- divChart -->
   
-<div id="PieChartID122e76ab4e16" 
-  style="width: 700; height: 600;">
+<div id="PieChartID2fc1789f2fb9" 
+  style="width: 600; height: 550;">
 </div>
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 19:12:06 2014 -->
+<!-- Fri Nov  7 06:28:48 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartID122e76ab4e16 () {
+function gvisDataPieChartID2fc1789f2fb9 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2007,16 +1617,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartID122e76ab4e16() {
-var data = gvisDataPieChartID122e76ab4e16();
+function drawChartPieChartID2fc1789f2fb9() {
+var data = gvisDataPieChartID2fc1789f2fb9();
 var options = {};
 options["allowHtml"] = true;
-options["width"] =    700;
-options["height"] =    600;
+options["width"] =    600;
+options["height"] =    550;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartID122e76ab4e16')
+    document.getElementById('PieChartID2fc1789f2fb9')
     );
     chart.draw(data,options);
     
@@ -2040,9 +1650,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartID122e76ab4e16);
+callbacks.push(drawChartPieChartID2fc1789f2fb9);
 })();
-function displayChartPieChartID122e76ab4e16() {
+function displayChartPieChartID2fc1789f2fb9() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2066,27 +1676,37 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e76ab4e16"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID2fc1789f2fb9"></script>
  
 <!-- divChart -->
   
-<div id="PieChartID122e76ab4e16" 
-  style="width: 700; height: 600;">
+<div id="PieChartID2fc1789f2fb9" 
+  style="width: 600; height: 550;">
 </div>
 
----  &vcenter
+*** =right
 
-## SECOND most important research area at REAL.
+>- <strong> within Regional Economic Growth falls:</strong>
+    - Neoclasical, Endogenous & Spatial Growth Models
+    - CGEs, static, dynamic and spatial
+    - Regional growth and convergence
+    - Spatial Policy for Growth and Equity
 
+>- _together Growth, Spatial Econometrics, Housing & Labor make up to 63%_
+
+--- &twocol w1:45% w2:35% &vcenter
+
+## 2nd most important research area at REAL.
+*** =left
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 19:12:06 2014 -->
+<!-- Fri Nov  7 06:33:32 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartID122e6893c337 () {
+function gvisDataPieChartID2ff556c25684 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2138,16 +1758,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartID122e6893c337() {
-var data = gvisDataPieChartID122e6893c337();
+function drawChartPieChartID2ff556c25684() {
+var data = gvisDataPieChartID2ff556c25684();
 var options = {};
 options["allowHtml"] = true;
-options["width"] =    700;
-options["height"] =    600;
+options["width"] =    600;
+options["height"] =    550;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartID122e6893c337')
+    document.getElementById('PieChartID2ff556c25684')
     );
     chart.draw(data,options);
     
@@ -2171,9 +1791,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartID122e6893c337);
+callbacks.push(drawChartPieChartID2ff556c25684);
 })();
-function displayChartPieChartID122e6893c337() {
+function displayChartPieChartID2ff556c25684() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2197,22 +1817,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e6893c337"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID2ff556c25684"></script>
  
 <!-- divChart -->
   
-<div id="PieChartID122e6893c337" 
-  style="width: 700; height: 600;">
+<div id="PieChartID2ff556c25684" 
+  style="width: 600; height: 550;">
 </div>
 <!-- PieChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Nov  2 19:12:06 2014 -->
+<!-- Fri Nov  7 06:33:32 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataPieChartID122e6893c337 () {
+function gvisDataPieChartID2ff556c25684 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2264,16 +1884,16 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartPieChartID122e6893c337() {
-var data = gvisDataPieChartID122e6893c337();
+function drawChartPieChartID2ff556c25684() {
+var data = gvisDataPieChartID2ff556c25684();
 var options = {};
 options["allowHtml"] = true;
-options["width"] =    700;
-options["height"] =    600;
+options["width"] =    600;
+options["height"] =    550;
 options["legend"] = "none";
 
     var chart = new google.visualization.PieChart(
-    document.getElementById('PieChartID122e6893c337')
+    document.getElementById('PieChartID2ff556c25684')
     );
     chart.draw(data,options);
     
@@ -2297,9 +1917,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartPieChartID122e6893c337);
+callbacks.push(drawChartPieChartID2ff556c25684);
 })();
-function displayChartPieChartID122e6893c337() {
+function displayChartPieChartID2ff556c25684() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2323,28 +1943,632 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID122e6893c337"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID2ff556c25684"></script>
  
 <!-- divChart -->
   
-<div id="PieChartID122e6893c337" 
-  style="width: 700; height: 600;">
+<div id="PieChartID2ff556c25684" 
+  style="width: 600; height: 550;">
+</div>
+*** =right
+>- All spatial sciences grow in importance
+>- Further survey should have a finer categorization
+
+--- &vcenter
+
+## Productivity by Research Area (1st)
+
+<!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
+<!-- Sat Nov  8 12:08:53 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataColumnChartID3c7a7fc7466f () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "1",
+1,
+2,
+2,
+1,
+8,
+11,
+3,
+3,
+0,
+2 
+],
+[
+ "2 to 3",
+2,
+0,
+1,
+1,
+11,
+13,
+9,
+1,
+7,
+1 
+],
+[
+ "4 to 5",
+2,
+0,
+2,
+1,
+0,
+3,
+4,
+0,
+2,
+0 
+],
+[
+ "More than 5",
+0,
+0,
+1,
+0,
+3,
+3,
+1,
+0,
+3,
+0 
+] 
+];
+data.addColumn('string','working_papers');
+data.addColumn('number','Environmental');
+data.addColumn('number','Reg. Econ. Dev.');
+data.addColumn('number','Location and Interaction');
+data.addColumn('number','NEG');
+data.addColumn('number','Other');
+data.addColumn('number','Econ. Growth');
+data.addColumn('number','Housing & Labor Mark.');
+data.addColumn('number','Geocomputation');
+data.addColumn('number','Spatial Econometrics');
+data.addColumn('number','Spatial Statistics');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartColumnChartID3c7a7fc7466f() {
+var data = gvisDataColumnChartID3c7a7fc7466f();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    950;
+options["height"] =    500;
+options["vAxis"] = {title:'Frequency'};
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('ColumnChartID3c7a7fc7466f')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumnChartID3c7a7fc7466f);
+})();
+function displayChartColumnChartID3c7a7fc7466f() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3c7a7fc7466f"></script>
+ 
+<!-- divChart -->
+  
+<div id="ColumnChartID3c7a7fc7466f" 
+  style="width: 950; height: 500;">
+</div>
+
+--- &vcenter
+## Productivity by Research Area (1st) & No. of Months
+
+<!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
+<!-- Sat Nov  8 12:08:53 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataColumnChartID3c7a73e162f2 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "1",
+18,
+14.5,
+7.5,
+3,
+14.5,
+16.09090909,
+7,
+17.33333333,
+null,
+2.5 
+],
+[
+ "2 to 3",
+12,
+null,
+19,
+3,
+14.09090909,
+15.69230769,
+33.11111111,
+60,
+17.57142857,
+48 
+],
+[
+ "4 to 5",
+31,
+null,
+57,
+46,
+null,
+40.66666667,
+41,
+null,
+15,
+null 
+],
+[
+ "More than 5",
+null,
+null,
+52,
+null,
+57.33333333,
+56,
+24,
+null,
+15.33333333,
+null 
+] 
+];
+data.addColumn('string','working_papers');
+data.addColumn('number','Environmental');
+data.addColumn('number','Reg. Econ. Dev.');
+data.addColumn('number','Location and Interaction');
+data.addColumn('number','NEG');
+data.addColumn('number','Other');
+data.addColumn('number','Econ. Growth');
+data.addColumn('number','Housing & Labor Mark.');
+data.addColumn('number','Geocomputation');
+data.addColumn('number','Spatial Econometrics');
+data.addColumn('number','Spatial Statistics');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartColumnChartID3c7a73e162f2() {
+var data = gvisDataColumnChartID3c7a73e162f2();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    950;
+options["height"] =    500;
+options["vAxis"] = {title:'Average Number of months'};
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('ColumnChartID3c7a73e162f2')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumnChartID3c7a73e162f2);
+})();
+function displayChartColumnChartID3c7a73e162f2() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3c7a73e162f2"></script>
+ 
+<!-- divChart -->
+  
+<div id="ColumnChartID3c7a73e162f2" 
+  style="width: 950; height: 500;">
+</div>
+
+--- &vcenter
+
+## Productivity by Research Area (2nd)
+
+<!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
+<!-- Sat Nov  8 13:17:59 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataColumnChartID3e63176e4e74 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "1",
+3,
+1,
+3,
+0,
+7,
+7,
+1,
+1,
+8,
+2 
+],
+[
+ "2 to 3",
+1,
+4,
+2,
+2,
+4,
+7,
+4,
+7,
+9,
+6 
+],
+[
+ "4 to 5",
+0,
+0,
+2,
+1,
+2,
+6,
+1,
+0,
+2,
+0 
+],
+[
+ "More than 5",
+1,
+0,
+1,
+1,
+1,
+6,
+0,
+0,
+1,
+0 
+] 
+];
+data.addColumn('string','working_papers');
+data.addColumn('number','Environmental');
+data.addColumn('number','Reg. Econ. Dev.');
+data.addColumn('number','Location and Interaction');
+data.addColumn('number','NEG');
+data.addColumn('number','Other');
+data.addColumn('number','Econ. Growth');
+data.addColumn('number','Housing & Labor Mark.');
+data.addColumn('number','Geocomputation');
+data.addColumn('number','Spatial Econometrics');
+data.addColumn('number','Spatial Statistics');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartColumnChartID3e63176e4e74() {
+var data = gvisDataColumnChartID3e63176e4e74();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    950;
+options["height"] =    500;
+options["vAxis"] = {title:'Frequency'};
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('ColumnChartID3e63176e4e74')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumnChartID3e63176e4e74);
+})();
+function displayChartColumnChartID3e63176e4e74() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3e63176e4e74"></script>
+ 
+<!-- divChart -->
+  
+<div id="ColumnChartID3e63176e4e74" 
+  style="width: 950; height: 500;">
+</div>
+
+--- &vcenter
+## Productivity by Research Area (2nd) & No. of Months
+
+<!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
+<!-- Sat Nov  8 13:17:59 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataColumnChartID3e634ae0adb0 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "1",
+8,
+18,
+18.33333333,
+null,
+6.714285714,
+12,
+18,
+15,
+17.375,
+18 
+],
+[
+ "2 to 3",
+27,
+17.75,
+46,
+35,
+20.5,
+17.42857143,
+13.5,
+14.42857143,
+22.11111111,
+19.33333333 
+],
+[
+ "More than 5",
+72,
+null,
+53,
+24,
+59,
+36.33333333,
+null,
+null,
+36,
+null 
+],
+[
+ "4 to 5",
+null,
+null,
+47,
+60,
+44,
+38.33333333,
+24,
+null,
+21,
+null 
+] 
+];
+data.addColumn('string','working_papers');
+data.addColumn('number','Environmental');
+data.addColumn('number','Reg. Econ. Dev.');
+data.addColumn('number','Location and Interaction');
+data.addColumn('number','NEG');
+data.addColumn('number','Other');
+data.addColumn('number','Econ. Growth');
+data.addColumn('number','Housing & Labor Mark.');
+data.addColumn('number','Geocomputation');
+data.addColumn('number','Spatial Econometrics');
+data.addColumn('number','Spatial Statistics');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartColumnChartID3e634ae0adb0() {
+var data = gvisDataColumnChartID3e634ae0adb0();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    950;
+options["height"] =    500;
+options["vAxis"] = {title:'Average Number of months'};
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('ColumnChartID3e634ae0adb0')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumnChartID3e634ae0adb0);
+})();
+function displayChartColumnChartID3e634ae0adb0() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3e634ae0adb0"></script>
+ 
+<!-- divChart -->
+  
+<div id="ColumnChartID3e634ae0adb0" 
+  style="width: 950; height: 500;">
 </div>
 
 --- &vcenter
 
 ## Productivity by Mafia Type
 
-![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
 
---- &vcenter
-
-## Productivity by Research Area (First)
-
-![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
 
 ---
 
-## The REAL Mafia in a Network Context
+## The REAL Mafia in a Network Context (Academics)
 
 <iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
