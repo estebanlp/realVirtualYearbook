@@ -236,7 +236,7 @@ callbacks.shift()();
 - Number of Respondents REAL Mafia: _104 responded surveys_
 - Number of attendants to this event: _120 aprox._ 
 
----
+--- &vcenter
 
 ## The 'Actual' Instrument
 
@@ -679,7 +679,6 @@ callbacks.shift()();
 
 ## Current Country
 
-
 <!-- GeoChart generated in R 3.1.1 by googleVis 0.5.5 package -->
 <!-- Sun Nov  2 14:12:58 2014 -->
 
@@ -1017,7 +1016,8 @@ callbacks.shift()();
   style="width: 800; height: 500;">
 </div>
 
---- 
+--- &vcenter
+
 ## Duration in REAL
 
 <!-- Histogram generated in R 3.1.1 by googleVis 0.5.5 package -->
@@ -1956,17 +1956,145 @@ callbacks.shift()();
 
 --- &vcenter
 
-## Productivity by Research Area (1st)
+## Productivity by Mafia Type
 
 <!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sat Nov  8 12:08:53 2014 -->
+<!-- Sun Nov  9 13:28:39 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataColumnChartID3c7a7fc7466f () {
+function gvisDataColumnChartID48874566420f () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "1",
+4,
+2,
+3,
+1,
+4 
+],
+[
+ "2 to 3",
+null,
+null,
+37,
+36.4,
+10.82758621 
+],
+[
+ "4 to 5",
+null,
+null,
+59,
+41.90909091,
+9 
+],
+[
+ "More than 5",
+null,
+36,
+null,
+54.28571429,
+15.33333333 
+] 
+];
+data.addColumn('string','working_papers');
+data.addColumn('number','Master.Student');
+data.addColumn('number','Other');
+data.addColumn('number','PhD.and.Master.Student');
+data.addColumn('number','PhD.Student');
+data.addColumn('number','Visiting.Scholar');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartColumnChartID48874566420f() {
+var data = gvisDataColumnChartID48874566420f();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    950;
+options["height"] =    500;
+options["vAxis"] = {title:'Average No. Months'};
+options["hAxis"] = {title:'Working Papers at REAL'};
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('ColumnChartID48874566420f')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumnChartID48874566420f);
+})();
+function displayChartColumnChartID48874566420f() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID48874566420f"></script>
+ 
+<!-- divChart -->
+  
+<div id="ColumnChartID48874566420f" 
+  style="width: 950; height: 500;">
+</div>
+
+--- &vcenter
+
+## Productivity by Research Area (1st)
+
+<!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
+<!-- Sun Nov  9 13:28:39 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataColumnChartID48873c7b0a61 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2039,16 +2167,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartColumnChartID3c7a7fc7466f() {
-var data = gvisDataColumnChartID3c7a7fc7466f();
+function drawChartColumnChartID48873c7b0a61() {
+var data = gvisDataColumnChartID48873c7b0a61();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    950;
 options["height"] =    500;
 options["vAxis"] = {title:'Frequency'};
+options["hAxis"] = {title:'Working Papers at REAL'};
 
     var chart = new google.visualization.ColumnChart(
-    document.getElementById('ColumnChartID3c7a7fc7466f')
+    document.getElementById('ColumnChartID48873c7b0a61')
     );
     chart.draw(data,options);
     
@@ -2072,9 +2201,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartColumnChartID3c7a7fc7466f);
+callbacks.push(drawChartColumnChartID48873c7b0a61);
 })();
-function displayChartColumnChartID3c7a7fc7466f() {
+function displayChartColumnChartID48873c7b0a61() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2098,26 +2227,27 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3c7a7fc7466f"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID48873c7b0a61"></script>
  
 <!-- divChart -->
   
-<div id="ColumnChartID3c7a7fc7466f" 
+<div id="ColumnChartID48873c7b0a61" 
   style="width: 950; height: 500;">
 </div>
 
 --- &vcenter
+
 ## Productivity by Research Area (1st) & No. of Months
 
 <!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sat Nov  8 12:08:53 2014 -->
+<!-- Sun Nov  9 13:28:41 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataColumnChartID3c7a73e162f2 () {
+function gvisDataColumnChartID488731e6854c () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2190,16 +2320,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartColumnChartID3c7a73e162f2() {
-var data = gvisDataColumnChartID3c7a73e162f2();
+function drawChartColumnChartID488731e6854c() {
+var data = gvisDataColumnChartID488731e6854c();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    950;
 options["height"] =    500;
 options["vAxis"] = {title:'Average Number of months'};
+options["hAxis"] = {title:'Working Papers at REAL'};
 
     var chart = new google.visualization.ColumnChart(
-    document.getElementById('ColumnChartID3c7a73e162f2')
+    document.getElementById('ColumnChartID488731e6854c')
     );
     chart.draw(data,options);
     
@@ -2223,9 +2354,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartColumnChartID3c7a73e162f2);
+callbacks.push(drawChartColumnChartID488731e6854c);
 })();
-function displayChartColumnChartID3c7a73e162f2() {
+function displayChartColumnChartID488731e6854c() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2249,11 +2380,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3c7a73e162f2"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID488731e6854c"></script>
  
 <!-- divChart -->
   
-<div id="ColumnChartID3c7a73e162f2" 
+<div id="ColumnChartID488731e6854c" 
   style="width: 950; height: 500;">
 </div>
 
@@ -2262,14 +2393,14 @@ callbacks.shift()();
 ## Productivity by Research Area (2nd)
 
 <!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sat Nov  8 13:17:59 2014 -->
+<!-- Sun Nov  9 13:28:41 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataColumnChartID3e63176e4e74 () {
+function gvisDataColumnChartID488715395a2c () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2342,16 +2473,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartColumnChartID3e63176e4e74() {
-var data = gvisDataColumnChartID3e63176e4e74();
+function drawChartColumnChartID488715395a2c() {
+var data = gvisDataColumnChartID488715395a2c();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    950;
 options["height"] =    500;
 options["vAxis"] = {title:'Frequency'};
+options["hAxis"] = {title:'Working Papers at REAL'};
 
     var chart = new google.visualization.ColumnChart(
-    document.getElementById('ColumnChartID3e63176e4e74')
+    document.getElementById('ColumnChartID488715395a2c')
     );
     chart.draw(data,options);
     
@@ -2375,9 +2507,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartColumnChartID3e63176e4e74);
+callbacks.push(drawChartColumnChartID488715395a2c);
 })();
-function displayChartColumnChartID3e63176e4e74() {
+function displayChartColumnChartID488715395a2c() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2401,26 +2533,27 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3e63176e4e74"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID488715395a2c"></script>
  
 <!-- divChart -->
   
-<div id="ColumnChartID3e63176e4e74" 
+<div id="ColumnChartID488715395a2c" 
   style="width: 950; height: 500;">
 </div>
 
 --- &vcenter
+
 ## Productivity by Research Area (2nd) & No. of Months
 
 <!-- ColumnChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sat Nov  8 13:17:59 2014 -->
+<!-- Sun Nov  9 13:33:51 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataColumnChartID3e634ae0adb0 () {
+function gvisDataColumnChartID48b532f8364d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2493,16 +2626,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartColumnChartID3e634ae0adb0() {
-var data = gvisDataColumnChartID3e634ae0adb0();
+function drawChartColumnChartID48b532f8364d() {
+var data = gvisDataColumnChartID48b532f8364d();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =    950;
 options["height"] =    500;
 options["vAxis"] = {title:'Average Number of months'};
+options["hAxis"] = {title:'Working Papers at REAL'};
 
     var chart = new google.visualization.ColumnChart(
-    document.getElementById('ColumnChartID3e634ae0adb0')
+    document.getElementById('ColumnChartID48b532f8364d')
     );
     chart.draw(data,options);
     
@@ -2526,9 +2660,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartColumnChartID3e634ae0adb0);
+callbacks.push(drawChartColumnChartID48b532f8364d);
 })();
-function displayChartColumnChartID3e634ae0adb0() {
+function displayChartColumnChartID48b532f8364d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2552,23 +2686,41 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID3e634ae0adb0"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID48b532f8364d"></script>
  
 <!-- divChart -->
   
-<div id="ColumnChartID3e634ae0adb0" 
+<div id="ColumnChartID48b532f8364d" 
   style="width: 950; height: 500;">
 </div>
 
---- &vcenter
+--- .segue bg:indigo
 
-## Productivity by Mafia Type
+## The REAL Network
 
-![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
+--- 
 
+## The REAL Mafia Network: Academic Influence
+
+<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+
+--- 
+
+## The REAL Mafia Network: Friendship Influence
+
+<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+
+--- .segue bg:indigo
+
+## The REAL Virtual Yearbook
+
+--- 
+
+<iframe src="http://www.real.illinois.edu/timeline/beta/" heingt='600px'></iframe>
 
 ---
 
-## The REAL Mafia in a Network Context (Academics)
+## Semantic Analysis: Word Cloud
 
-<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+What is the first word that comes to your mind when you hear Geoffrey Hewings?
+

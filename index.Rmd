@@ -43,7 +43,7 @@ print(table2,tag='chart')
 - Number of Respondents REAL Mafia: _104 responded surveys_
 - Number of attendants to this event: _120 aprox._ 
 
----
+--- &vcenter
 
 ## The 'Actual' Instrument
 
@@ -92,7 +92,6 @@ print(pie4,tag="chart")
 
 ## Current Country
 
-
 ```{r echo=FALSE, message=FALSE, results='asis'}
 setwd("/Users/estebanlopez/Documents/001 PhD Material/Work at REAL/25th-Anniversary/Timeline/realVirtualYearbook/")
 data<-read.csv("data/data_exploratory.csv")
@@ -114,7 +113,8 @@ cat(unlist(pie2$html$chart))
 print(pie2,tag="chart")
 ```
 
---- 
+--- &vcenter
+
 ## Duration in REAL
 
 ```{r echo=FALSE, message=FALSE, results='asis'}
@@ -172,9 +172,33 @@ print(pie2,tag="chart")
 
 --- &vcenter
 
+## Productivity by Mafia Type
+
+```{r echo=F,message=FALSE,results='asis'}
+#The more time you are at REAL, the more papers you do.
+require(doBy)
+require(ggplot2)
+df<-data.frame(summaryBy(months_total~Mafia_type + working_papers,data=data))
+
+df2<-reshape(df,timevar="Mafia_type",direction="wide",idvar="working_papers",v.names="months_total.mean")
+
+colnames(df2)[2:6]<-levels(factor(df$Mafia_type))
+df2<-data.frame(rbind(df2[,1],df2[3,],df2[4,],df2[2,]))
+
+bchart0<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Average No. Months'}",hAxis="{title:'Working Papers at REAL'}"))
+print(bchart0,'chart')
+
+#a<-ggplot(df,aes(x=working_papers, y=months_total.mean, group=Mafia_type))
+#a + geom_bar(stat="identity", position="dodge",aes(fill=Mafia_type))+labs(y="Months in REAL", x="Number of Working Papers", fill="")+ theme(legend.position="bottom")
+```
+
+--- &vcenter
+
 ## Productivity by Research Area (1st)
 
 ```{r echo=F,message=FALSE,results='asis'}
+#The most frequent fields of study (Eco. growth, housing, SpEcon) do mostly 1 or 2-3 papers. 
+
 require(doBy)
 require(ggplot2)
 df<-data.frame(table(data$research_1,data$working_papers))
@@ -192,15 +216,19 @@ df2<-reshape(df,timevar="research_1",direction="wide",idvar="working_papers",v.n
 
 colnames(df2)[2:11]<-levels(factor(df$research_1))
 
-bchart<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Frequency'}"))
+bchart<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Frequency'}",hAxis="{title:'Working Papers at REAL'}"))
 print(bchart,'chart')
+
 
 ```
 
 --- &vcenter
+
 ## Productivity by Research Area (1st) & No. of Months
 
 ```{r echo=F,message=FALSE,results='asis'}
+#This plot serves to show how much time in average takes to do papers. It seems that those papers that were concentrated in the 1 and 2-3 categories took around 16 months in average to do. In contrast mafia working in less frequent areas seem to have spent more time and also get more papers. This is the case of Interaction and location. In summary, mafia concentrated in fields such as Econ. Growth seem to be characterized by less papers and shorter stays, opositite fields like Location and interaction that are characterized by longer stays but also more papers. 
+
 require(doBy)
 require(ggplot2)
 df<-data.frame(summaryBy(months_total~research_1 + working_papers,data=data,FUN=mean))
@@ -215,7 +243,7 @@ levels(df$research_1)[levels(data$research_1)=="Spatial Analysis and Geocomputat
 df2<-reshape(df,timevar="research_1",direction="wide",idvar="working_papers",v.names="months_total.mean")
 colnames(df2)[2:11]<-levels(factor(df$research_1))
 
-bchart1<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Average Number of months'}"))
+bchart1<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Average Number of months'}",hAxis="{title:'Working Papers at REAL'}"))
 print(bchart1,'chart')
 
 ```
@@ -225,6 +253,8 @@ print(bchart1,'chart')
 ## Productivity by Research Area (2nd)
 
 ```{r echo=F,message=FALSE,results='asis'}
+#Same as in the pie chart, spatial econometrics seem to have concentrated in the 1 and 2-3 productivity section. However, this time Econ. Growth seems to have been more distributed across the productivity levels. 
+
 require(doBy)
 require(ggplot2)
 df<-data.frame(table(data$research_2,data$working_papers))
@@ -242,15 +272,17 @@ df2<-reshape(df,timevar="research_2",direction="wide",idvar="working_papers",v.n
 
 colnames(df2)[2:11]<-levels(factor(df$research_2))
 
-bchart<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Frequency'}"))
+bchart<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Frequency'}",hAxis="{title:'Working Papers at REAL'}"))
 print(bchart,'chart')
 
 ```
 
 --- &vcenter
+
 ## Productivity by Research Area (2nd) & No. of Months
 
 ```{r echo=F,message=FALSE,results='asis'}
+# What seems interesting is that this time those that were choosen as the second areas of specialization seem to have needed more time in general, perhaps because of lesser economics of scale of getting to know another area of expertise. However it mantains that the more you stay in REAL the more you produce papers.
 require(doBy)
 require(ggplot2)
 df<-data.frame(summaryBy(months_total~research_2 + working_papers,data=data,FUN=mean))
@@ -265,26 +297,38 @@ levels(df$research_2)[levels(data$research_2)=="Spatial Analysis and Geocomputat
 df2<-reshape(df,timevar="research_2",direction="wide",idvar="working_papers",v.names="months_total.mean")
 colnames(df2)[2:11]<-levels(factor(df$research_2))
 
-bchart1<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Average Number of months'}"))
+bchart1<-gvisColumnChart(df2,options=list(width=950, height=500, vAxis="{title:'Average Number of months'}",hAxis="{title:'Working Papers at REAL'}"))
 print(bchart1,'chart')
 
 ```
 
---- &vcenter
+--- .segue bg:indigo
 
-## Productivity by Mafia Type
+## The REAL Network
 
-```{r echo=F,message=FALSE,results='asis'}
-require(doBy)
-require(ggplot2)
-df<-data.frame(summaryBy(months_total~Mafia_type + working_papers,data=data))
-a<-ggplot(df,aes(x=working_papers, y=months_total.mean, group=Mafia_type))
-a + geom_bar(stat="identity", position="dodge",aes(fill=Mafia_type))+labs(y="Months in REAL", x="Number of Working Papers", fill="")+ theme(legend.position="bottom")
-```
+--- 
 
+## The REAL Mafia Network: Academic Influence
+
+<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+
+--- 
+
+## The REAL Mafia Network: Friendship Influence
+
+<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+
+--- .segue bg:indigo
+
+## The REAL Virtual Yearbook
+
+--- 
+
+<iframe src="http://www.real.illinois.edu/timeline/beta/" heingt='600px'></iframe>
 
 ---
 
-## The REAL Mafia in a Network Context (Academics)
+## Semantic Analysis: Word Cloud
 
-<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+What is the first word that comes to your mind when you hear Geoffrey Hewings?
+
