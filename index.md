@@ -236,7 +236,7 @@ callbacks.shift()();
 - Number of Respondents REAL Mafia: _104 responded surveys_
 - Number of attendants to this event: _120 aprox._ 
 
---- &vcenter
+---
 
 ## The 'Actual' Instrument
 
