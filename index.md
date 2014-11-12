@@ -16,12 +16,12 @@ knit        : slidify::knit2slides
 
 >1. The Instrument
 >2. Exploratory Analysis
->3. The REAL Mafia in a Network context
+>3. The REAL Network
   - Academic
   - Friendship
->4. Spatial Analysis
->5. The REAL Virtual Yearbook
->6. Memories Semantic Analysis
+>4. The REAL Virtual Yearbook
+>5. Further Analysis/Research
+
 
 
 --- 
@@ -2698,17 +2698,64 @@ callbacks.shift()();
 
 ## The REAL Network
 
+--- &twocol w1:45% w2:35% &vcenter
+## The REAL Mafia Network: Academic Influence
+***=left
+<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet3/network/AcademicFinal.png" height='600px'></iframe>
+
+***=right
+- Network Diameter: 9 
+- Average Degree: 1.872
+- Graph Density: 0.013
+- Ave. Path Length: 3.09
+- Size: In-Degree
+- Colors: Out-Degree (red=low, green=high)
+
 --- 
 
 ## The REAL Mafia Network: Academic Influence
 
-<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+<iframe src="http://www.real.illinois.edu/networksVis/REALacademicNet3/network/index.html#" height='600px'></iframe>
+
+--- &twocol w1:45% w2:35% &vcenter
+
+## The REAL Mafia Network: Academic Influence (No Geoff)
+***=left
+<iframe src="http://www.real.illinois.edu/networksVis/REALacademicNetNoGeoff/network/AcademicFinalNoGeoff.png" height='600px'></iframe>
+
+***=right
+- Network Diameter: 9 
+- Average Degree: 1.579
+- Graph Density: 0.011
+- Ave. Path Length: 3.199
+- Size: In-Degree
+- Colors: Out-Degree (red=low, green=high)
+
+--- 
+
+## The REAL Mafia Network: Academic Influence (No Geoff)
+
+<iframe src="http://www.real.illinois.edu/networksVis/REALacademicNetNoGeoff/network/index.html#" height='600px'></iframe>
+
+--- &twocol w1:45% w2:35% &vcenter
+
+## The REAL Mafia Network: Friendship Influence
+***=left
+<iframe src="http://www.real.illinois.edu/networksVis/REALfrienshipNet/network/FriendshipFinal.png" height='600px'></iframe>
+
+***=right
+- Network Diameter: 10 
+- Average Degree: 2.058
+- Graph Density: 0.013
+- Ave. Path Length: 3.521
+- Size: In-Degree
+- Colors: Out-Degree (red=low, green=high)
 
 --- 
 
 ## The REAL Mafia Network: Friendship Influence
 
-<iframe src="http://www.real.illinois.edu/networksVis/REALAcademicNet2/network/index.html#" heingt='600px'></iframe>
+<iframe src="http://www.real.illinois.edu/networksVis/REALfrienshipNet/network/index.html#" height='600px'></iframe>
 
 --- .segue bg:indigo
 
@@ -2720,7 +2767,19 @@ callbacks.shift()();
 
 ---
 
-## Semantic Analysis: Word Cloud
+## Further analysis/research
 
-What is the first word that comes to your mind when you hear Geoffrey Hewings?
+>- Actual Working papers' colaboration
+>- UIUC Faculty Colaboration
+>- Semantic Analysis (word clouds, annecdote networks)
+>- Spatial Analysis
+>- Conference Attendance (affiliation networks) 
+>- etc., etc.,... $\leadsto +\infty$
+
+--- 
+
+## How did I do these slides?
+
+<iframe src="http://slidify.org/" height='600px'></iframe>
+
 
